@@ -9,6 +9,7 @@ import getGeolaction from "./geolocalizacion.js";
 import responsiveMedia from "./objeto-responsivo.js";
 import responsiveTester from "./prueba-responsive.js";
 import { digitalClock, alarm} from "./reloj.js";
+import draw from "./sorteo.js";
 import { moveBall, shorcuts } from "./teclado.js";
 import darkTheme from "./tema_obscuro.js";
 
@@ -37,9 +38,12 @@ d.addEventListener("DOMContentLoaded", e =>
 
 	responsiveTester("responsive-tester");
 	userDeviceInfo("user-device");
+	draw(".winner-btn", ".player");
+	searchFilters(".card-filter", ".card");
+	
 	webcam("webcam");
 	getGeolaction("geolocation");
-	searchFilters(".card-filter", ".card");
+	
 })
 
 darkTheme(".dark-theme-btn", "dark-mode");
