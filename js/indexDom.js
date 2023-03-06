@@ -4,6 +4,7 @@ import userDeviceInfo from "./deteccion-dispositivos.js";
 import networkStatus from "./deteccion-red.js";
 import webcam from "./deteccion-webcam.js";
 import hamburgerMenu from "./ejercicios-hamburguesa.js";
+import searchFilters from "./filtro-busquedas.js";
 import getGeolaction from "./geolocalizacion.js";
 import responsiveMedia from "./objeto-responsivo.js";
 import responsiveTester from "./prueba-responsive.js";
@@ -38,6 +39,7 @@ d.addEventListener("DOMContentLoaded", e =>
 	userDeviceInfo("user-device");
 	webcam("webcam");
 	getGeolaction("geolocation");
+	searchFilters(".card-filter", ".card");
 })
 
 darkTheme(".dark-theme-btn", "dark-mode");
