@@ -1,4 +1,5 @@
 import scrollTopButton from "./boton-scroll.js";
+import slider from "./carrusel.js";
 import countdown from "./cuenta-regresiva.js";
 import userDeviceInfo from "./deteccion-dispositivos.js";
 import networkStatus from "./deteccion-red.js";
@@ -9,9 +10,11 @@ import getGeolaction from "./geolocalizacion.js";
 import responsiveMedia from "./objeto-responsivo.js";
 import responsiveTester from "./prueba-responsive.js";
 import { digitalClock, alarm} from "./reloj.js";
+import scrollSpy from "./scroll-espia.js";
 import draw from "./sorteo.js";
 import { moveBall, shorcuts } from "./teclado.js";
 import darkTheme from "./tema_obscuro.js";
+import smartVideo from "./video-inteligente.js";
 
 const d = document,
 birthDate = "June 22, 2023 07:00:00";
@@ -39,8 +42,12 @@ d.addEventListener("DOMContentLoaded", e =>
 	responsiveTester("responsive-tester");
 	userDeviceInfo("user-device");
 	draw(".winner-btn", ".player");
+	slider();
 	searchFilters(".card-filter", ".card");
+	scrollSpy();
+	smartVideo();
 	
+
 	webcam("webcam");
 	getGeolaction("geolocation");
 	
